@@ -1,0 +1,16 @@
+node_modules
+
+.DS_Store/
+.env.local*
+.history
+.idea
+.vscode
+.cache
+.storybook
+.eslintcache
+
+# testing
+coverage
+
+# production
+build
