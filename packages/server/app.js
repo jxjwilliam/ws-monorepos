@@ -2,16 +2,22 @@ import express from 'express'
 import http from 'http'
 import logger from 'morgan'
 import createError from 'http-errors'
+import cors from 'cors'
 
 const app = express()
 const port = process.env.PORT || 8001
 
 app.use(logger('dev'))
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
+app.use(cors())
+
+app.get('/api/ms/:id', (req, res) => {
+  const { id } = req.params
+  const luckyNo = Math.floor(Math.random() * Math.floor(id))
+  res.json({ msg: `Your lucky number is ${luckyNo}. ` })
+})
 
 app.use('/', (req, res) => {
-  res.send('It works')
+  res.send('packages workspace works.')
 })
 
 // catch 404 and forward to error handler
