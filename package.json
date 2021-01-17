@@ -1,10 +1,17 @@
 {
   "name": "ms-monorepos",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "description": "lerna + yarn workspaces",
+  "main": "packages/common/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --recursive",
+    "lerna": "lerna run test",
+    "new-version": "lerna version --conventional-commits --yes",
+    "diff": "lerna diff"
   },
   "keywords": [],
   "author": "",
@@ -31,8 +38,7 @@
     "lint-staged": "^10.5.3",
     "mocha": "^8.2.1",
     "nodemon": "^2.0.7",
-    "prettier": "^2.2.1",
-    "rimraf": "^3.0.2"
+    "prettier": "^2.2.1"
   },
   "dependencies": {
     "dotenv": "^8.2.0"

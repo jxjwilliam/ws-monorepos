@@ -34,6 +34,7 @@
     "prefer-const": 2,
     "node/no-unsupported-features/es-syntax": 0,
     "node/no-unpublished-require": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/prop-types": 0,
     "react/destructuring-assignment": 0,
     "react/no-unescaped-entities": 0,

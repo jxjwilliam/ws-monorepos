@@ -1,4 +1,11 @@
-# 💡 monorepo
+# 💡 monorepo templates
+
+- client (create-react-app)
+- server (express.js)
+- code quality: eslint+prettier+airbnb
+- test: mocha/chai + jest (client)
+- package manager: lerna + yarn workspace
+- all inclusives and work
 
 ## 🪕 1. Initialize
 
@@ -98,35 +105,37 @@ $ npx create-react-app client
 $ mkdir common
 ```
 
-## 🪕 2. yarn workspaces
+## 🪕 2. lerna + yarn workspaces
 
----
+- lerna.json
 
-```shell
- yarn upgrade-interactive
+```json
+  "npmClient": "yarn",
+  "useWorkspaces": true,
 ```
 
-## 🪕 3. lerna
+- package.json
 
----
-
-```shell
-$ lerna init
-$ lerna bootstrap
+```json
+  "private": true,
+  "workspaces": ["packages/*"],
 ```
 
-- [Why Lerna and Yarn Workspaces is a Perfect Match for Building Mono-Repos – A Close Look at Features and Performance](https://doppelmutzi.github.io/monorepo-lerna-yarn-workspaces/)
+- install all dependencies in `packages/`
 
-## 🪕 4. More
+```shell
+$ npx lerna bootstrap
+```
 
----
-
-### 📑 bug fix
+## 🪕 3. More
 
 - error An unexpected error occurred: "expected workspace package to exist for \"eslint\"".
 
   ```shell
+  $ yarn upgrade-interactive
   $ yarn -v # 1.22.10
   $ yarn help policies
   $ yarn policies set-version 1.18.0
   ```
+
+- [Why Lerna and Yarn Workspaces is a Perfect Match for Building Mono-Repos – A Close Look at Features and Performance](https://doppelmutzi.github.io/monorepo-lerna-yarn-workspaces/)
