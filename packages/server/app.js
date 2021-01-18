@@ -4,8 +4,10 @@ import logger from 'morgan'
 import createError from 'http-errors'
 import cors from 'cors'
 
+require('dotenv').config()
+
 const app = express()
-const port = process.env.PORT || 8001
+const port = process.env.PORT
 
 app.use(logger('dev'))
 app.use(cors())
@@ -38,5 +40,5 @@ app.use((err, req, res) => {
 
 const server = http.createServer(app)
 server.listen(port, () => {
-  console.log(`服务运行在端口 ${port}!`)
+  console.log(`🚒 服务运行在端口 ${port}!`)
 })

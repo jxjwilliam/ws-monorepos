@@ -6,6 +6,7 @@
 - test: mocha/chai + jest (client)
 - package manager: lerna + yarn workspace
 - all inclusives and work
+- [Chinese Version](./README-CN.md)
 
 ## 🪕 1. Initialize
 
