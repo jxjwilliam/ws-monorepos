@@ -43,17 +43,21 @@ default dot-files include:
 
 ```shell
 $ npx eslint --init
-$ npm i -D prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-node eslint-config-node
+$ npm i -D prettier
+$ npm i -D eslint-plugin-prettier eslint-config-prettier
+$ npm i -D eslint-plugin-node eslint-config-node
 ```
 
 config `.eslintrc.json`(3 个地方需要配置)
 
 ```json
+{
   "extends": ["airbnb", "prettier", "plugin:node/recommended"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
   }
+}
 ```
 
 ### 📑 babel support
@@ -68,7 +72,7 @@ $ npm i -D @babel/cli @babel/register
 ### 📑 tools
 
 ```shell
-$ npm i -D lerna husky commitizen concurrently cross-env lint-staged nodemon rimraf
+$ npm i -D lerna husky commitizen concurrently cross-env lint-staged nodemon
 $ npm i dotenv
 ```
 
@@ -83,10 +87,12 @@ $ mkdir test
 test/.eslintrc.json:
 
 ```json
-"env": {
-  "mocha": true
-},
-"extends": ["plugin:mocha/recommended"],
+{
+  "env": {
+    "mocha": true
+  },
+  "extends": ["plugin:mocha/recommended"]
+}
 ```
 
 ### 📑 lerna
@@ -98,7 +104,6 @@ $ npx lerna init
 ### 📑 setup packages
 
 ```shell
-
 $ mkdir packages && cd _
 $ npx express-generator server
 $ npx create-react-app client
@@ -110,15 +115,19 @@ $ mkdir common
 - lerna.json
 
 ```json
+{
   "npmClient": "yarn",
-  "useWorkspaces": true,
+  "useWorkspaces": true
+}
 ```
 
 - package.json
 
 ```json
+{
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": ["packages/*"]
+}
 ```
 
 - install all dependencies in `packages/`
