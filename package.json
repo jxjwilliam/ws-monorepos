@@ -5,8 +5,8 @@
   "workspaces": [
     "packages/*"
   ],
-  "description": "lerna + yarn workspaces",
-  "main": "packages/common/index.js",
+  "description": "miroservice monorepo, lerna + yarn workspaces project",
+  "main": "index.js",
   "scripts": {
     "test": "mocha --recursive",
     "lerna": "lerna run test",
