@@ -4,13 +4,16 @@
   "private": true,
   "scripts": {
     "start": "nodemon --exec babel-node ./app",
-    "prod": "babel-node ./app"
+    "start1": "learn bootstrap",
+    "prod": "babel-node ./app",
+    "clean": "rimraf build"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
+    "helmet": "^4.4.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
   },

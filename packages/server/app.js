@@ -3,6 +3,8 @@ import http from 'http'
 import logger from 'morgan'
 import createError from 'http-errors'
 import cors from 'cors'
+import path from 'path'
+import helmet from 'helmet'
 
 require('dotenv').config()
 
@@ -11,6 +13,8 @@ const port = process.env.PORT
 
 app.use(logger('dev'))
 app.use(cors())
+app.use(helmet())
+app.use(express.static(path.join(__dirname, 'build')))
 
 app.get('/api/ms/:id', (req, res) => {
   const { id } = req.params
