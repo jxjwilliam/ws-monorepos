@@ -17,10 +17,7 @@ function uniqObj(ary = [], obj = {}) {
 }
 
 function extractObj(ary = [], obj = {}) {
-  return ary.reduce(
-    (acc, key) => ({ ...acc, ...(obj[key] && { [key]: obj[key] }) }),
-    {}
-  )
+  return ary.reduce((acc, key) => ({ ...acc, ...(obj[key] && { [key]: obj[key] }) }), {})
 }
 
 module.exports = {

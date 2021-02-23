@@ -3,7 +3,12 @@
  * ms-backend-framework/playground/reduce.js
  */
 export function searchKeywords(messages = [], keywords = []) {
-  return keywords.reduce((acc, cur) => (messages.some(message => message.includes(cur)) && acc.push(cur), acc), [])
+  return keywords.reduce(
+    (acc, cur) => (
+      messages.some(message => message.includes(cur)) && acc.push(cur), acc
+    ),
+    []
+  )
 }
 
 /**
@@ -32,5 +37,7 @@ export async function AsyncTotal(ary = []) {
  * out: {}, ''
  * gatsby: data.site.siteMetadata: title, decription, author, siteUrl
  */
-export const getSiteMatadata = data => ((data || {}).site || {}).siteMetadata || {}
-export const getSiteMatadataTitle = data => data?.site?.siteMetadata?.title || ''
+export const getSiteMatadata = data =>
+  ((data || {}).site || {}).siteMetadata || {}
+export const getSiteMatadataTitle = data =>
+  data?.site?.siteMetadata?.title || ''
