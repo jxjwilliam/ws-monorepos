@@ -1,0 +1,21 @@
+{
+  "name": "@williamjiang/assets",
+  "version": "1.0.0",
+  "description": "add assets images etc.",
+  "keywords": [
+    "William",
+    "Jiang",
+    "BestITConsulting"
+  ],
+  "author": "William Jiang <jxjwilliam@gmail.com>",
+  "homepage": "http://\"https://www.npmjs.com/package/@williamjiang/assets",
+  "license": "ISC",
+  "main": "lib/assets.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/jxjwilliam/ms-monorepos.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}

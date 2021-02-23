@@ -1,0 +1,30 @@
+{
+  "name": "@williamjiang/frontmatter",
+  "version": "1.0.1",
+  "description": "William Jiang, Best IT Consulting Inc",
+  "main": "index.js",
+  "keywords": [
+    "BestITConsulting",
+    "William Jiang"
+  ],
+  "author": "William Jiang",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node ./index",
+    "test": "babel-node ./index"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://www.npmjs.com/package/@williamjiang/lib"
+  }
+}

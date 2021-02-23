@@ -2,8 +2,8 @@
 
 - client (create-react-app)
 - server (express.js)
+- test: jest
 - code quality: eslint+prettier+airbnb
-- test: mocha/chai + jest (client)
 - package manager: lerna + yarn workspace
 - all inclusives and work
 - [Chinese Version](./README-CN.md)
@@ -31,14 +31,14 @@ default dot-files include:
 
 - .editorconfig
 - .eslintrc.json
+- .eslintignore
 - .nvmrc
 - .env
 - .gitignore
+- .prettierrc
 - .prettierignore
 - .babelrc
-- .eslintignore
 - .markdownlint.json
-- .prettierrc
 
 ### 📑 eslint, prettier, airbnb
 
@@ -75,25 +75,6 @@ $ npm i -D @babel/cli @babel/register
 ```shell
 $ npm i -D lerna husky commitizen concurrently cross-env lint-staged nodemon
 $ npm i dotenv
-```
-
-### 📑 config test
-
-```shell
-$ npm i -D mocha chai
-$ npm i -D eslint-plugin-mocha
-$ mkdir test
-```
-
-test/.eslintrc.json:
-
-```json
-{
-  "env": {
-    "mocha": true
-  },
-  "extends": ["plugin:mocha/recommended"]
-}
 ```
 
 ### 📑 lerna
@@ -134,7 +115,8 @@ $ mkdir common
 - install all dependencies in `packages/`
 
 ```shell
-$ npx lerna bootstrap
+$ lerna clean
+$ lerna bootstrap
 ```
 
 Or `npm-run-all`:

@@ -1,0 +1,27 @@
+{
+  "name": "@williamjiang/bffmatter",
+  "version": "1.0.0",
+  "description": "William Jiang incremently add common used stuff.",
+  "keywords": [
+    "BestITConsulting",
+    "William Jiang"
+  ],
+  "author": "William Jiang <jxjwilliam@gmail.com>",
+  "homepage": "https://www.npmjs.com/package/@williamjiang/util",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/jxjwilliam/ms-monorepos.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}

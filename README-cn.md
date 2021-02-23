@@ -7,7 +7,7 @@
 - 客户端（`create-react-app`）
 - 服务器（`express.js`）
 - 代码质量：`eslint` + `prettier` + `airbnb`
-- 测试：`mocha` / `chai`, `jest`（客户端）
+- 测试：`jest`
 - 包管理：`lerna` + `yarn workspaces`
 
 ### 📑 微服务
