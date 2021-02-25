@@ -62,7 +62,9 @@ export function parsePathFiles(files = []) {
           tempClose[idx - 1][prevKey].push({ [ary[idx]]: [] })
         }
 
-        tempClose[idx] = tempClose[idx - 1][prevKey].find(obj => Object.keys(obj)[0] === ary[idx])
+        tempClose[idx] = tempClose[idx - 1][prevKey].find(
+          obj => Object.keys(obj)[0] === ary[idx]
+        )
 
         if (len === idx + 1) {
           tempClose[idx][ary[idx]].push(file)
@@ -70,7 +72,7 @@ export function parsePathFiles(files = []) {
       }
     }
 
-    tempClose = []
+    tempClose = [] // undef(tempClose) ?
   })
 
   return menu
@@ -121,5 +123,30 @@ export function setDir(dir) {
  * tip: tree-nodes default collapse is close
  */
 export function initNodesKeys(nodes) {
-  return nodes.reduce((acc, node) => ({ ...acc, [Object.keys(node)[0]]: false }), {})
+  return nodes.reduce(
+    (acc, node) => ({ ...acc, [Object.keys(node)[0]]: false }),
+    {}
+  )
+}
+
+export function recursive(jsonAry = [], to = '') {
+  const tree = []
+  jsonAry.forEach(node => {
+    if (typeof node === 'object') {
+      const key = Object.keys(node)[0]
+      const value = node[key]
+      const children = recursive(value, `${to}/${key}`)
+      tree.push({
+        id: key,
+        name: `${setDir(key)} (${value.length})`,
+        children,
+      })
+    } else {
+      tree.push({
+        id: `${to}/${node}`,
+        name: setTitle(node),
+      })
+    }
+  })
+  return tree
 }

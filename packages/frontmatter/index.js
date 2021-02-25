@@ -5,4 +5,5 @@ export {
   setTitle,
   setDir,
   initNodesKeys,
+  recursive,
 } from './lib/treeNodes'
