@@ -4,9 +4,8 @@
 
 ## Usage
 
-```
+```javascript
 const scripts = require('scripts');
-
 // TODO: DEMONSTRATE API
 ```
 

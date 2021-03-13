@@ -25,3 +25,16 @@ $ yarn start
 ```
 
 然后在浏览器中打开 localhost:3000, 它运作良好!
+
+| pacakge    | usage                          | memo                    | URL                                                       |
+| ---------- | ------------------------------ | ----------------------- | --------------------------------------------------------- |
+| fronmatter | frontend sharing               | es6 library             | <https://www.npmjs.com/package/@williamjiang/frontmatter> |
+| client     | frontend demo                  | create-react-app        |
+| bffmatter  | backend for sharing            | commonjs library        | <https://www.npmjs.com/package/@williamjiang/bffmatter>   |
+| server     | backend demo                   | express                 |
+| assets     | static resource                | used for UI design      | <https://www.npmjs.com/package/@williamjiang/assets>      |
+| scripts    | shell/node scripts for sharing | fake, db-setup,, devOps | <https://www.npmjs.com/package/@williamjiang/scripts>     |
+
+### Notices
+
+- cors, rdbms, no-sql, auth, 3rd-apis...

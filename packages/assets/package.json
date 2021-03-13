@@ -8,7 +8,7 @@
     "BestITConsulting"
   ],
   "author": "William Jiang <jxjwilliam@gmail.com>",
-  "homepage": "http://\"https://www.npmjs.com/package/@williamjiang/assets",
+  "homepage": "https://www.npmjs.com/package/@williamjiang/assets",
   "license": "ISC",
   "main": "lib/assets.js",
   "repository": {

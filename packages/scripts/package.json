@@ -1,6 +1,6 @@
 {
   "name": "@williamjiang/scripts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "William Jiang use lerna create scripts.",
   "keywords": [
     "William",
@@ -9,7 +9,7 @@
   ],
   "author": "William Jiang <jxjwilliam@gmail.com>",
   "homepage": "https://www.npmjs.com/package/@williamjiang/scripts",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/scripts.js",
   "repository": {
     "type": "git",
